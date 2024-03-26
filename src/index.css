@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Roboto+Slab:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: 'Roboto Slab', sans-serif;
+  line-height: 1.5;
+  color: #ebe7ef;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-image: linear-gradient(180deg, #FFFFFF 0%, #6284FF 50%, #FF0000 100%);
+  min-height: 100vh;
+  height: 100%;
+}
+
+
+h1 {
+  font-family: 'Caprasimo', cursive;
+  font-size: 3rem;
+  padding-top: 3%;
+  color: #3f3b00;
+  text-align: center;
+}
+
+#game-container {
+  max-width: 45rem;
+  margin: 3rem auto;
+  padding: 2rem;
+  border-radius: 6px;
+  background: linear-gradient(#383624, #282617);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+#players {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.p{
+  margin-top: 2rem;
+  display: flex;
+  gap: 10px;
+}
+
+.p input, span, button{
+  padding: 10px;
+  font-family: 'Caprasimo', cursive;
+  font-size: larger;
+  border: none;
+  background-color: transparent;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.p span{
+  color: #FF0000;
+  font-size: x-large;
+}
+
+.p button{
+  cursor: pointer;
+  color: black;
+  background-color: #2f48a0;
+  border-radius: 10px;
+  opacity: 0.8;
+  transition: background-color 0.3s ease;
+}
+
+.p button:hover{
+  background-color: rgb(29, 29, 184);
+}
+
+.active{
+  border: 3px solid transparent;
+  box-shadow: 0 0 10px #ff00ff;
+}
+
+#player-turn{
+  text-align: center;
+  margin-top: 30px;
+  color: #fff;
+}
+
+.board-parent{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+#game-board{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5%;
+}
+
+#game-board ul{
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.eachRow{
+  display: flex;
+  gap: 20px;
+}
+
+.eachCol button{
+  width: 64px;
+  height: 56px;
+  margin: 10px;
+  cursor: pointer;
+  background-color: #0a0a0a;
+  border-radius: 5%;
+}
+
+#log {
+  max-width: 20rem;
+  color: #0cffa2;
+  margin: 2rem auto;
+  padding: 0;
+  text-align: center;
+  font-family: cursive;
+}
+
+#log p {
+  border-radius: 4px;
+  margin: 0.75rem;
+}
+
+@keyframes slide-in-from-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-30%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.game-over{
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 5rem;
+  border-radius: 4%;
+  margin: 5rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.game-over h1, h2{
+  text-shadow: 0 0 2px #ff00ff;
+  color: #ff00ff;
+  border: 3px solid transparent;
+  text-shadow: 2px 2px 2px #ff00ff;
+}
+
+.game-over button{
+  color: #ff00ff;
+  border: 3px solid transparent;
+  box-shadow: 0 0 5px #ff00ff;
+  cursor: pointer;
+}
+
+.game-over button:hover{
+  transition: 0.2s ease-in;
+  box-shadow: 0 0 13px #ff00ff;
+}
+
+
